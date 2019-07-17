@@ -18,11 +18,11 @@ else
 
 // Ex 02
 $isEasy = true;
-if ($isEasy == true) echo "<h4> C'est facile!! </h4>";
+if ($isEasy === true) echo "<h4> C'est facile!! </h4>";
 else echo "<h4> C'est difficile !!! </h4>";
 // Autre façon de faire : 
 $isEasy = false;
-if ($isEasy == true)
+if ($isEasy === true)
 {
 ?>
 <h4> C'est facile!! </h4>
@@ -35,7 +35,8 @@ else
   <h4> C'est difficile !!! </h4>
 <?php  
 }
-
+//Ternaire :
+echo $isEasy===true ?  "<h4> C'est facile!! </h4>" : "<h4> C'est difficile !!! </h4>";
 // Ex 03
 $age = 10;
 $gender = 'homme';
@@ -59,7 +60,7 @@ elseif ($gender == 'femme' && $age >= 18)
 
 // Ex 04
 echo "<h3> Echelle de Richter </h3>";
-$magnitude = 6;
+$magnitude = rand (1, 9);
 switch ($magnitude)
 {
     case 1 :
@@ -98,6 +99,9 @@ switch ($magnitude)
     case 9 :
         echo "$magnitude : Séisme capable de tout détruire sur une très vaste zone.";
     break;
+
+    default : 
+        echo "erreur";
 }
 // Ex 05
 echo "<h3>Traduction d'une ternaire 1 : </h3>";
